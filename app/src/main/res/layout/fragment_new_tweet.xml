@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fmNewTweet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--Header-->
+    <RelativeLayout
+        android:id="@+id/rlNewTweetHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_dark">
+
+        <ImageView
+            android:id="@+id/btnCloseNewTweet"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/delete"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageView
+            android:src="@drawable/loading"
+            android:id="@+id/ivNewTweetUserAvt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/lblUsername"
+            android:text="Your name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/ivNewTweetUserAvt"
+            android:textColor="@color/primary"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/lblAt"
+            android:text="your at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/ivNewTweetUserAvt"
+            android:layout_below="@+id/lblUsername"
+            android:textColor="@color/primary"
+            android:textSize="13sp"
+            android:layout_marginRight="10dp"/>
+
+
+
+    </RelativeLayout>
+
+    <!--Body-->
+    <RelativeLayout
+        android:id="@+id/rlNewtweetBody"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/rlNewTweetHeader"
+        android:layout_above="@+id/rlNewtweetFooter">
+
+        <EditText
+            android:id="@+id/edtNewTweet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:backgroundTint="@color/primary_dark"
+            android:textColor="@color/secondary_text"
+            android:hint="What's happening?"
+            android:maxLength="140"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <!--Footer-->
+    <RelativeLayout
+        android:id="@+id/rlNewtweetFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tvCharCount"
+            android:text="140"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnNewTweet"
+            android:textColor="@color/secondary_text"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:id="@+id/btnNewTweet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/primary"
+            android:background="@color/primary_dark"
+            android:text="TWEET"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
